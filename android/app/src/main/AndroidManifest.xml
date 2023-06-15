@@ -1,0 +1,44 @@
+<manifest
+        xmlns:android="http://schemas.android.com/apk/res/android" package="com.testiconchange">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+      android:name=".MainApplication"
+      android:icon="@mipmap/trashred"
+      android:label="@string/app_name"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+        <activity android:exported="true"
+                  android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+                android:name="Trashred"
+                android:enabled="false"
+                android:exported="true"
+                android:icon="@mipmap/trashred"
+                android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+                android:name="Trashtransp"
+                android:enabled="false"
+                android:exported="true"
+                android:icon="@mipmap/trashtransp"
+                android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+    </application>
+</manifest>
